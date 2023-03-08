@@ -1,13 +1,13 @@
 const sizes = {
   mobile: '300px',
-  tabletVertical: '600px',
+  tabletVertical: '795px',
   tabletHorizontal: '900px',
   desktop: '1250px',
   bigScreen: '1650px',
 };
 
 const mediaQueries = {
-  mobile: `(min-width: ${sizes.mobile}) and (max-width: ${sizes.tabletHorizontal})`,
+  mobile: `(min-width: ${sizes.mobile}) and (max-width: ${sizes.tabletVertical})`,
   tabletVertical: `(min-width: ${sizes.tabletVertical} and (max-width: ${sizes.tabletHorizontal})`,
   tabletHorizontal: `(min-width: ${sizes.tabletHorizontal} and (max-width: ${sizes.tabletHorizontal})`,
   desktop: `(min-width: ${sizes.tabletHorizontal})`,
