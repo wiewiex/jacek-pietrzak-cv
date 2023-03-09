@@ -171,7 +171,11 @@ export const Row = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
+
   @media ${mediaQueries.mobile} {
     flex-wrap: wrap;
+    && > div {
+      display: none;
+    }
   }
 `;

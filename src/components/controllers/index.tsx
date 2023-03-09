@@ -15,7 +15,7 @@ import Education from './Education';
 export default function Home() {
   return (
     <MainContainer backgroundColor={colors.primary} color={colors.secondary}>
-      <AnimationWrapper duration={4} keyframe={fadeIn}>
+      <AnimationWrapper duration={2} keyframe={fadeIn}>
         <PageContainer>
           <MainSection data={data.mainSection} />
           <Experience data={data.experience} toEntry={3} showTitle />
