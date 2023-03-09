@@ -22,7 +22,7 @@ export default function SingleExperienceEntry({ data }: { data: IEntry }) {
         <H6 width="25%">
           {printExperienceDuration(data.startTime, data.endTime)}
         </H6>
-        <H4 width="55%">{data.position}</H4>
+        <H4 width="54%">{data.position}</H4>
         {data.logo ? (
           <IconContainer>
             <Image src={data.logo} width={30} height={30} alt="company logo" />

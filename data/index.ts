@@ -78,6 +78,10 @@ const data: IData = {
           icon: '/technologies/react-query.svg',
         },
         {
+          name: 'Styled components',
+          icon: '/technologies/styled-components.svg',
+        },
+        {
           name: 'Mantine',
           icon: '/technologies/mantine.svg',
         },
