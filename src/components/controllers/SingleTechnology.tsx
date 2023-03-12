@@ -4,7 +4,6 @@ import {
   SingleLevel,
   IconContainer,
 } from '../views/styledContainers';
-import colors from '@/utils/colors';
 import { ISingleTechnology } from '../../../data/types';
 import { SingleTechText } from '../views/styledTexts';
 import Image from 'next/image';
@@ -25,12 +24,7 @@ export default function SingleTechnology({
         <Image src={icon} width={30} height={30} alt={name + ' icon'} />
       </IconContainer>
       <LevelBar>
-        <SingleTechText
-          color={colors.primary}
-          backgroundColor={colors.secondary}
-        >
-          {name}
-        </SingleTechText>
+        <SingleTechText>{name}</SingleTechText>
         <SingleLevel active={isActive.l1} />
         <SingleLevel active={isActive.l2} />
         <SingleLevel active={isActive.l3} />

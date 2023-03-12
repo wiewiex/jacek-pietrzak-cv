@@ -1,11 +1,9 @@
 import styled from 'styled-components';
-import fonts from '@/utils/fonts';
-import colors from '@/utils/colors';
 import mediaQueries from '@/utils/mediaQueries';
 
 export const Text = styled.p<{ width?: string }>`
   font-size: 13px;
-  font-family: ${fonts.primary};
+  font-family: ${(props) => props.theme.fonts.primary};
   text-align: justify;
   width: ${(props) => (props.width ? props.width : 'auto')};
   @media ${mediaQueries.mobile} {
@@ -16,14 +14,14 @@ export const Text = styled.p<{ width?: string }>`
 
 export const H1 = styled.h1`
   font-size: 35px;
-  font-family: ${fonts.secondary};
-  color: ${(props) => (props.color ? props.color : colors.secondary)};
+  font-family: ${(props) => props.theme.fonts.secondary};
+  color: ${(props) => props.theme.colors.secondary};
 `;
 
 export const H2 = styled.h2`
   font-size: 20px;
-  font-family: ${fonts.primary};
-  color: ${(props) => (props.color ? props.color : colors.secondary)};
+  font-family: ${(props) => props.theme.fonts.primary};
+  color: ${(props) => props.theme.colors.secondary};
   @media ${mediaQueries.mobile} {
     padding: 20px 0;
   }
@@ -33,15 +31,15 @@ export const H3 = styled.h3`
   font-size: 18px;
   padding-bottom: 10px;
   font-weight: 200;
-  font-family: ${fonts.secondary};
-  color: ${(props) => (props.color ? props.color : colors.secondary)};
+  font-family: ${(props) => props.theme.fonts.secondary};
+  color: ${(props) => props.theme.colors.secondary};
 `;
 
 export const H4 = styled.h3<{ width?: string }>`
   font-size: 14px;
   font-weight: 600;
-  font-family: ${fonts.primary};
-  color: ${(props) => (props.color ? props.color : colors.secondary)};
+  font-family: ${(props) => props.theme.fonts.primary};
+  color: ${(props) => props.theme.colors.secondary};
   width: ${(props) => (props.width ? props.width : 'auto')};
   @media ${mediaQueries.mobile} {
     width: 70%;
@@ -51,29 +49,26 @@ export const H4 = styled.h3<{ width?: string }>`
 export const H5 = styled.h5`
   font-size: 12px;
   font-weight: 200;
-  font-family: ${fonts.secondary};
-  color: ${(props) => (props.color ? props.color : colors.secondary)};
+  font-family: ${(props) => props.theme.fonts.secondary};
+  color: ${(props) => props.theme.colors.secondary};
 `;
 
 export const H6 = styled.h6<{ width?: string }>`
   font-size: 13px;
   font-weight: 400;
-  font-family: ${fonts.primary};
-  color: ${(props) => (props.color ? props.color : colors.secondary)};
+  font-family: ${(props) => props.theme.fonts.primary};
+  color: ${(props) => props.theme.colors.secondary};
   width: ${(props) => (props.width ? props.width : 'auto')};
   @media ${mediaQueries.mobile} {
     width: 30%;
   }
 `;
 
-export const SingleTechText = styled.h6<{
-  color: string;
-  backgroundColor: string;
-}>`
-  color: ${(props) => props.color};
+export const SingleTechText = styled.h6`
+  color: ${(props) => props.theme.colors.primary};
   font-size: 12px;
-  font-family: ${fonts.secondary};
-  background-color: ${(props) => props.backgroundColor};
+  font-family: ${(props) => props.theme.fonts.secondary};
+  background-color: ${(props) => props.theme.colors.secondary};
   position: absolute;
   left: 2px;
   padding: 0 1px;

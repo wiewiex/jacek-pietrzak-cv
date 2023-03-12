@@ -1,6 +1,5 @@
 import data from '../../../data/index';
-import colors from '@/utils/colors';
-import { fadeIn, fadeInLeft, fadeInRight } from '@/utils/keyframes';
+import { fadeIn } from '@/utils/keyframes';
 import AnimationWrapper from '@/utils/AnimationWrapper';
 import {
   PageContainer,
@@ -14,7 +13,7 @@ import Education from './Education';
 
 export default function Home() {
   return (
-    <MainContainer backgroundColor={colors.primary} color={colors.secondary}>
+    <MainContainer>
       <AnimationWrapper duration={2} keyframe={fadeIn}>
         <PageContainer>
           <MainSection data={data.mainSection} />

@@ -1,13 +1,9 @@
 import styled from 'styled-components';
 import mediaQueries from '@/utils/mediaQueries';
-import colors from '@/utils/colors';
 
-export const MainContainer = styled.main<{
-  backgroundColor: string;
-  color: string;
-}>`
-  background-color: ${(props) => props.backgroundColor};
-  color: ${(props) => (props.color ? props.color : colors.secondary)};
+export const MainContainer = styled.main`
+  background-color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.secondary};
 `;
 
 export const PageContainer = styled.div<{ justifyContent?: string }>`
@@ -103,7 +99,7 @@ export const SingleContactContainer = styled.div`
   padding: 5px 10px;
   a {
     display: flex;
-    color: ${(props) => (props.color ? props.color : colors.secondary)};
+    color: ${(props) => props.theme.colors.secondary};
     text-decoration: none;
     align-items: center;
   }
