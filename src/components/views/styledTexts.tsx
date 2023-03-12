@@ -5,7 +5,7 @@ import mediaQueries from '@/utils/mediaQueries';
 
 export const Text = styled.p<{ width?: string }>`
   font-size: 13px;
-  font-family: ${fonts.primary.font};
+  font-family: ${fonts.primary};
   text-align: justify;
   width: ${(props) => (props.width ? props.width : 'auto')};
   @media ${mediaQueries.mobile} {
@@ -16,13 +16,13 @@ export const Text = styled.p<{ width?: string }>`
 
 export const H1 = styled.h1`
   font-size: 35px;
-  font-family: ${fonts.secondary.font};
+  font-family: ${fonts.secondary};
   color: ${(props) => (props.color ? props.color : colors.secondary)};
 `;
 
 export const H2 = styled.h2`
   font-size: 20px;
-  font-family: ${fonts.primary.font};
+  font-family: ${fonts.primary};
   color: ${(props) => (props.color ? props.color : colors.secondary)};
   @media ${mediaQueries.mobile} {
     padding: 20px 0;
@@ -33,14 +33,14 @@ export const H3 = styled.h3`
   font-size: 18px;
   padding-bottom: 10px;
   font-weight: 200;
-  font-family: ${fonts.secondary.font};
+  font-family: ${fonts.secondary};
   color: ${(props) => (props.color ? props.color : colors.secondary)};
 `;
 
 export const H4 = styled.h3<{ width?: string }>`
   font-size: 14px;
   font-weight: 600;
-  font-family: ${fonts.primary.font};
+  font-family: ${fonts.primary};
   color: ${(props) => (props.color ? props.color : colors.secondary)};
   width: ${(props) => (props.width ? props.width : 'auto')};
   @media ${mediaQueries.mobile} {
@@ -51,14 +51,14 @@ export const H4 = styled.h3<{ width?: string }>`
 export const H5 = styled.h5`
   font-size: 12px;
   font-weight: 200;
-  font-family: ${fonts.secondary.font};
+  font-family: ${fonts.secondary};
   color: ${(props) => (props.color ? props.color : colors.secondary)};
 `;
 
 export const H6 = styled.h6<{ width?: string }>`
   font-size: 13px;
   font-weight: 400;
-  font-family: ${fonts.primary.font};
+  font-family: ${fonts.primary};
   color: ${(props) => (props.color ? props.color : colors.secondary)};
   width: ${(props) => (props.width ? props.width : 'auto')};
   @media ${mediaQueries.mobile} {
@@ -72,7 +72,7 @@ export const SingleTechText = styled.h6<{
 }>`
   color: ${(props) => props.color};
   font-size: 12px;
-  font-family: ${fonts.secondary.font};
+  font-family: ${fonts.secondary};
   background-color: ${(props) => props.backgroundColor};
   position: absolute;
   left: 2px;

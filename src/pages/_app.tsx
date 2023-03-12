@@ -1,10 +1,6 @@
 import type { AppProps } from 'next/app';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import fonts from '@/utils/fonts';
-import dynamic from 'next/dynamic';
-const GoogleFontLoader = dynamic(() => import('react-google-font-loader'), {
-  ssr: false,
-});
+import { FontLoader } from '@/utils/fonts';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -29,11 +25,8 @@ const theme: ThemeInterface = {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <FontLoader />
       <GlobalStyle />
-      <GoogleFontLoader
-        fonts={Object.values(fonts)}
-        subsets={['cyrillic-ext', 'greek']}
-      />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
