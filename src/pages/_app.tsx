@@ -1,6 +1,9 @@
 import type { AppProps } from 'next/app';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { FontLoader } from '@/utils/fonts';
+import { createGlobalStyle, ThemeProvider, css } from 'styled-components';
+
+const fonts = css`
+  @import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Cutive+Mono&family=Major+Mono+Display&display=swap');
+`;
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -8,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+  ${fonts}
 `;
 
 interface ThemeInterface {
@@ -25,7 +29,6 @@ const theme: ThemeInterface = {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <FontLoader />
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
